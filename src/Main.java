@@ -1,6 +1,14 @@
-
+import java.util.Date;
 public class Main {
 	public static void main(String[] args){
+		
+		Date now = new Date();
+		System.out.println(now); //Tue Sep 05 22:35:21 PDT 2017
+		System.out.println(now.getTime()); //1504676258535
+		Date past = new Date(1316622225935L);
+		System.out.println(past);//Wed Sep 21 09:23:45 PDT 2011
+		
+		
 		StringBuilder sb1_1 = new StringBuilder();
 		for (int i = 1; i < 101;  i++){
 			sb1_1.append(i).append(",");

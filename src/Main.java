@@ -1,6 +1,18 @@
 
 public class Main {
 	public static void main(String[] args){
+		StringBuilder sb1_1 = new StringBuilder();
+		for (int i = 1; i < 101;  i++){
+			sb1_1.append(i).append(",");
+		}
+		
+		String s1_1 = sb1_1.toString();
+		String[] a = s1_1.split(",");
+		for (String a1 : a){
+			System.out.println(a1);
+		}
+		
+		
 		String s1 = "@@Java@@";
 		String s2 = "Java";
 		String s3 = "java";
@@ -44,7 +56,32 @@ public class Main {
 		//System.out.println(sb);
 		String s7 = sb.toString();
 		System.out.println(s7);
-			
+		
+		//String is immutable
+		//StringBuilder and StringBuffer is mutable
+		
+		String s8 = "abc,def:ghi";
+		String regex = "[,:]";
+		String [] words = s8.split(regex);
+		for (String w: words){
+			System.out.print(w + "->");
+		}
+		System.out.println("   ");
+		
+		String regex2 ="[beh]";
+		String replacement = "X";
+		String w2= s8.replaceAll(regex2, replacement);
+		System.out.println(w2);
+		
+		
 	}
+	
+	//pattern matching
+	//regex = Regular Expression
+	boolean isValidPlayerName(String name){
+		String regex = "[A-Z] [A-Z0-9]{7}";
+		return name.matches(regex);
+	}
+
 	
 }

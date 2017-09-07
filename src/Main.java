@@ -1,12 +1,68 @@
 import java.util.Date;
+import java.util.Calendar; //ch2
+import java.text.SimpleDateFormat; //ch2
+import java.util.ArrayList; //ch3
+import java.util.Iterator; //ch3
 public class Main {
 	public static void main(String[] args){
+		//chr3
 		
+		
+		/*
+		ArrayList<String> names = new ArrayList<String>();
+		ArrayList<Date> dates = new ArrayList<Date>();
+		ArrayList<Hero> heros = new ArrayList<Hero>();
+		ArrayList<Integer> ints = new ArrayList<Integer>();
+		*/
+		
+		ArrayList<Integer> points = new ArrayList<Integer>();
+		points.add(10);
+		points.add(20);
+		points.add(100);
+		
+		for (int i : points){			
+			System.out.println(i);
+		}
+		ArrayList<String> greetings = new ArrayList<String>();
+		greetings.add("Good Morning");
+		greetings.add("Good Afternoon");
+		greetings.add("Good Night");
+		for (int i = 0; i< greetings.size(); i++){
+			System.out.println(i + ":" + greetings.get(i));
+		}
+		for (String greeting: greetings){
+			System.out.println(greeting);
+		}
+		greetings.add(1, "Hello");
+		for (int i = 0; i< greetings.size(); i++){
+			System.out.println(i+ ":" + greetings.get(i));
+		}
+		greetings.remove(1);
+		for (int i = 0; i< greetings.size(); i++){
+			System.out.println(i+ ":" + greetings.get(i));
+		}
+		greetings.set(1,"Hello");
+		for (int i = 0; i< greetings.size(); i++){
+			System.out.println(i+ ":" + greetings.get(i));
+		}
+		/*Iterator*/
+		Iterator<Integer> it = points.iterator();
+		while (it.hasNext()){
+			int point =it.next();
+			System.out.println(point);
+		}
+		System.out.println("\n****Chr2***");
 		Date now = new Date();
 		System.out.println(now); //Tue Sep 05 22:35:21 PDT 2017
 		System.out.println(now.getTime()); //1504676258535
+		
+		
 		Date past = new Date(1316622225935L);
 		System.out.println(past);//Wed Sep 21 09:23:45 PDT 2011
+		
+		long currentTime = System.currentTimeMillis();
+		System.out.println(currentTime); //1504756146466
+		
 		
 		
 		StringBuilder sb1_1 = new StringBuilder();

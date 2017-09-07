@@ -6,9 +6,20 @@ import java.util.Iterator; //ch3
 public class Main {
 	public static void main(String[] args){
 		//chr3
+		System.out.println("***ch3-Q2***");
+		Hero h1 = new Hero("Saito");
+		Hero h2 = new Hero ("Suzuki");
 		
+		ArrayList<Hero> heros = new ArrayList<Hero>();
+		heros.add(h1);
+		heros.add(h2);
+		for (Hero h : heros){
+			System.out.println(h.getName());
+		}
 		
-		/*
+		System.out.println("******");
+		
+	 	/*
 		ArrayList<String> names = new ArrayList<String>();
 		ArrayList<Date> dates = new ArrayList<Date>();
 		ArrayList<Hero> heros = new ArrayList<Hero>();
